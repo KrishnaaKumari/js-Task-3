@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Task-3</title>
+        <style>
+           
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                gap: 10px;
+            }
+            .right{
+                display: flex;
+                justify-content: right;
+            }
+            span{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="container">
+                <div><label class="right">Name:</label></div>
+                <div><input type="text" id="right1"/>
+                    <span id="res1"></span>
+                </div>
+                <div><label class="right">Email:</label></div>
+                <div><input type="text" id="right2"/>
+                    <span id="res2"></span>
+                </div>
+                <div><label class="right">Website:</label></div>
+                <div><input type="text" id="right3"/>
+                    <span id="res3"></span>
+                </div>
+                <div><label class="right">Message:</label></div>
+                <div> <textarea rows="5" id="right4"></textarea>
+                    <span id="res4"></span>
+                </div>
+                <div></div>
+                <div><button type="button" onclick="fun()">Submit</button></div>
+        </div>
+        </form>
+        <script>
+            function fun()
+            {
+                let x1 = document.querySelector("#right1").value;
+                let text1;
+                if (x1=="") {
+                    text1 = "The field is required";
+                    right1.style.border="2px solid red";
+                }
+                else{
+                    text1=""
+                }
+                document.getElementById("res1").innerHTML = text1;
+
+                let x2 = document.querySelector("#right2").value;
+                let text2;
+                if (x2=="") {
+                    text2 = "A valid email address is required";
+                    right2.style.border="2px solid red";
+                }
+                else{
+                    text2="";
+                }
+                document.getElementById("res2").innerHTML = text2;
+
+                let x3 = document.querySelector("#right3").value;
+                let text3;
+                if (x3=="") {
+                    text3 = "A valid url is required";
+                    right3.style.border="2px solid red";
+                }
+                else{
+                    text3="";
+                }
+                document.getElementById("res3").innerHTML = text3;
+
+                let x4 = document.querySelector("#right4").value;
+                let text4;
+                if (x4=="") {
+                    text4 = "This field is required";
+                    right4.style.border="2px solid red";
+                }
+                else{
+                    text4="";
+                }
+                document.getElementById("res4").innerHTML = text4;
+            }
+        </script>
+    </body>
+</html>
